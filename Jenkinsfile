@@ -10,5 +10,14 @@ pipeline {
                 sh "echo linkCheck completed"
             }
         }
+        stage('Generating Artifacts') {
+            steps {
+                sh "echo Generating artifacts...."
+                sh "npm install"
+                
+            }
+        }
+
     }
 }
+

@@ -2,4 +2,5 @@
 
 env.COMPONENT="user"
 env.APPTYPE="nodejs"
+env.NEXUS_URL="172.31.17.146"
 nodejs()

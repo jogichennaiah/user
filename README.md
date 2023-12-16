@@ -41,4 +41,8 @@ Now, lets set up the service with systemctl.
 # systemctl enable user
 ```
 
-
+template(name="OnlyMsg" type="string="%msg: : :drop-last-lf%\n")
+if ($programename == 'user') then {
+    action(type="omfile" file="/var/log/user.log" template="OnlyMsg")
+    & stop
+}
